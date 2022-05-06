@@ -91,7 +91,6 @@
 				B45860FC85052B5D9E7EC89F /* Pods-WishList.debug.xcconfig */,
 				0AF37BC01E9D6F47C36845B4 /* Pods-WishList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
