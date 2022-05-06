@@ -40,8 +40,11 @@ class ViewController: UIViewController {
         // anchorView를 통해 UI와 연결 (anchorView를 통해서 dropdown 버튼에 붙임)
         dropDown.anchorView = self.dropDown
         
-        // View를 가리지 않고, View 아래에 팝업이 붙도록
-        dropDown.bottomOffset = CGPoint(x: 0, y: dropView.bounds.height)
+        // dropDown 위치 변경
+        dropDown.bottomOffset = CGPoint(x: 15, y: 88)
+        dropDown.width = 44 // 글꼴이나 크기 변경하고 width 값을 늘린 후, 중앙정렬 필요. (중앙정렬 어떻게하냐..)
+        
+
             
         // selectionAction을 통해 아이템의 index와 item(이름)을 가져올 수 있다.
         dropDown.selectionAction = { [weak self] (index, item) in
