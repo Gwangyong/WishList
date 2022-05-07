@@ -15,6 +15,7 @@
 		79354DBF282403E200C52166 /* WishList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79354DBD282403E200C52166 /* WishList.xcdatamodeld */; };
 		79354DC1282403E400C52166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79354DC0282403E400C52166 /* Assets.xcassets */; };
 		79354DC4282403E400C52166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79354DC2282403E400C52166 /* LaunchScreen.storyboard */; };
+		79A33A8628266C910074A8A1 /* SDMiSaeng.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A33A8528266C910074A8A1 /* SDMiSaeng.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		79354DC0282403E400C52166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79354DC3282403E400C52166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79354DC5282403E400C52166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A33A8528266C910074A8A1 /* SDMiSaeng.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDMiSaeng.ttf; sourceTree = "<group>"; };
 		B45860FC85052B5D9E7EC89F /* Pods-WishList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishList.debug.xcconfig"; path = "Target Support Files/Pods-WishList/Pods-WishList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 		79354DB3282403E200C52166 /* WishList */ = {
 			isa = PBXGroup;
 			children = (
+				79A33A8528266C910074A8A1 /* SDMiSaeng.ttf */,
 				79354DB4282403E200C52166 /* AppDelegate.swift */,
 				79354DB6282403E200C52166 /* SceneDelegate.swift */,
 				79354DB8282403E200C52166 /* ListScreenViewController.swift */,
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A33A8628266C910074A8A1 /* SDMiSaeng.ttf in Resources */,
 				79354DC4282403E400C52166 /* LaunchScreen.storyboard in Resources */,
 				79354DC1282403E400C52166 /* Assets.xcassets in Resources */,
 				79354DBC282403E200C52166 /* Main.storyboard in Resources */,
