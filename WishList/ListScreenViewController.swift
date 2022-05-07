@@ -12,10 +12,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         initUI()
         setDropDown()
+        self.navigationItem.rightBarButtonItem?.tintColor = .black
+        self.ivIcon.image = UIImage.init(named: "50.up")
     }
 
     let dropDown = DropDown()
-    let itemList = ["목록", "기록", "설정"]
+    let itemList = ["목록", "기록"]
     
     func initUI() {
         dropView.backgroundColor = UIColor.init(named: "#F1F1F1")
@@ -44,12 +46,13 @@ class ViewController: UIViewController {
         dropDown.bottomOffset = CGPoint(x: 15, y: 88)
         dropDown.width = 44 // 글꼴이나 크기 변경하고 width 값을 늘린 후, 중앙정렬 필요. (중앙정렬 어떻게하냐..)
         
-
+        dropDown.textFont = UIFont(name: "SDMiSaeng", size: CGFloat(20))!
             
         // selectionAction을 통해 아이템의 index와 item(이름)을 가져올 수 있다.
         dropDown.selectionAction = { [weak self] (index, item) in
             self?.tfInput.text = item
-            self?.ivIcon.image = UIImage.init(named: "16")
+            //위의 대로, selectionAction이 발생하면 변경될 이미지.
+            self?.ivIcon.image = UIImage.init(named: "50.upg")
             // 다시 메뉴를 열 때, 이전에 선택한 값이 선택되지 않은 상태로 열림.
             self?.dropDown.clearSelection()
         }
@@ -57,15 +60,15 @@ class ViewController: UIViewController {
         // 취소 시 처리
         dropDown.cancelAction = { [weak self] in
             // 빈 화면 터치 시 DropDown이 사라지고, 아이콘을 원래대로 변경
-            self?.ivIcon.image = UIImage.init(named: "16")
+            self?.ivIcon.image = UIImage.init(named: "50.up")
         }
     }
 
-    @IBAction func tapDropDownButton(_ sender: Any) {
+    @IBAction func tapDropDownButton(_ sender: UIBarButtonItem) {
         // dropDown 팝업을 보여줌
         dropDown.show()
-        // 아이콘 이미지를 변경하여 DropDown이 펼쳐진 것을 보여줌
-        self.ivIcon.image = UIImage.init(named: "AppIcon-2")
+        // DropDown이 펼쳐져있을 경우의 이미지!
+        self.ivIcon.image = UIImage.init(named: "50.down")
     }
 
 }
