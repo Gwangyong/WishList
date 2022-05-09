@@ -84,7 +84,12 @@ extension ItemListViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else { return UITableViewCell() }
+        // 위에 정의해준 itemNameList 배열의 indexPath.row 값으로 하여, 동일한 이름의 이미지와 이름을 가져다가 배치함
+        let img = UIImage(named: "\(itemNameList[indexPath.row]).png")
+        cell.itemIconView.image = img
+        cell.itemNameLabel.text = itemNameList[indexPath.row]
+        
         return cell
     }
     
