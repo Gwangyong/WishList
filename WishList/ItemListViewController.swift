@@ -1,7 +1,7 @@
 import UIKit
 import DropDown
 
-class ViewController: UIViewController {
+class ItemListViewController: UIViewController {
 
     @IBOutlet weak var dropView: UIView!
     @IBOutlet weak var tfInput: UITextField!
@@ -13,8 +13,10 @@ class ViewController: UIViewController {
         initUI()
         setDropDown()
         self.navigationItem.rightBarButtonItem?.tintColor = .black
-        self.ivIcon.image = UIImage.init(named: "50.up")
+        self.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
     }
+    
+    let itemNameList = ["전체항목", "여행", "가족", "친구", "연인", "배움", "도전", "ETC"]
 
     let dropDown = DropDown()
     let itemList = ["목록", "기록"]
@@ -52,7 +54,7 @@ class ViewController: UIViewController {
         dropDown.selectionAction = { [weak self] (index, item) in
             self?.tfInput.text = item
             //위의 대로, selectionAction이 발생하면 변경될 이미지.
-            self?.ivIcon.image = UIImage.init(named: "50.upg")
+            self?.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
             // 다시 메뉴를 열 때, 이전에 선택한 값이 선택되지 않은 상태로 열림.
             self?.dropDown.clearSelection()
         }
@@ -60,7 +62,7 @@ class ViewController: UIViewController {
         // 취소 시 처리
         dropDown.cancelAction = { [weak self] in
             // 빈 화면 터치 시 DropDown이 사라지고, 아이콘을 원래대로 변경
-            self?.ivIcon.image = UIImage.init(named: "50.up")
+            self?.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
         }
     }
 
@@ -68,8 +70,31 @@ class ViewController: UIViewController {
         // dropDown 팝업을 보여줌
         dropDown.show()
         // DropDown이 펼쳐져있을 경우의 이미지!
-        self.ivIcon.image = UIImage.init(named: "50.down")
+        self.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-down-3916919")
     }
-
+    
 }
 
+// UITableView
+extension ItemListViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    // UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemNameList.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return cell
+    }
+    
+    // UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("--> \(indexPath.row)")
+    }
+}
+
+class ListCell: UITableViewCell {
+    @IBOutlet weak var itemIconView: UIImageView!
+    @IBOutlet weak var itemNameLabel: UILabel!
+}
