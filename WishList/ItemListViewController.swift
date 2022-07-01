@@ -3,6 +3,7 @@ import DropDown
 
 class ItemListViewController: UIViewController {
 
+    // tfInput(TextFieldInput) / ivIcon(ImageViewIcon)
     @IBOutlet weak var dropView: UIView!
     @IBOutlet weak var tfInput: UITextField!
     @IBOutlet weak var ivIcon: UIImageView!
@@ -16,30 +17,26 @@ class ItemListViewController: UIViewController {
         self.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
     }
     
-    let itemNameList = ["전체항목", "여행", "가족", "친구", "연인", "배움", "도전", "ETC"]
-
+    let kategorieList = ["전체", "여행", "가족", "친구", "연인", "배움", "도전", "ETC"]
     let dropDown = DropDown()
-    let itemList = ["목록", "기록"]
+    let viewListLabel = ["목록", "기록"]
     
     func initUI() {
         dropView.backgroundColor = UIColor.init(named: "#F1F1F1")
         dropView.layer.cornerRadius = 10
-        
         DropDown.appearance().textColor = UIColor.black
         DropDown.appearance().selectedTextColor = UIColor.blue
         DropDown.appearance().backgroundColor = UIColor.white
         DropDown.appearance().selectionBackgroundColor = UIColor.lightGray
         DropDown.appearance().setupCornerRadius(10)
         dropDown.dismissMode = .automatic
-        
         tfInput.text = "목록"
-        
         ivIcon.tintColor = UIColor.gray
     }
     
     // DropDown
     func setDropDown() {
-        dropDown.dataSource = itemList
+        dropDown.dataSource = viewListLabel
         
         // anchorView를 통해 UI와 연결 (anchorView를 통해서 dropdown 버튼에 붙임)
         dropDown.anchorView = self.dropDown
@@ -47,7 +44,6 @@ class ItemListViewController: UIViewController {
         // dropDown 위치 변경
         dropDown.bottomOffset = CGPoint(x: 15, y: 88)
         dropDown.width = 44 // 글꼴이나 크기 변경하고 width 값을 늘린 후, 중앙정렬 필요. (중앙정렬 어떻게하냐..)
-        
         dropDown.textFont = UIFont(name: "SDMiSaeng", size: CGFloat(20))!
             
         // selectionAction을 통해 아이템의 index와 item(이름)을 가져올 수 있다.
@@ -66,11 +62,13 @@ class ItemListViewController: UIViewController {
         }
     }
 
+    // btnSelect와 연결되어있음
     @IBAction func tapDropDownButton(_ sender: UIBarButtonItem) {
         // dropDown 팝업을 보여줌
         dropDown.show()
         // DropDown이 펼쳐져있을 경우의 이미지!
         self.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-down-3916919")
+        
     }
     
 }
@@ -80,16 +78,15 @@ extension ItemListViewController: UITableViewDataSource, UITableViewDelegate {
     
     // UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemNameList.count
+        return kategorieList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else { return UITableViewCell() }
         // 위에 정의해준 itemNameList 배열의 indexPath.row 값으로 하여, 동일한 이름의 이미지와 이름을 가져다가 배치함
-        let img = UIImage(named: "\(itemNameList[indexPath.row]).png")
+        let img = UIImage(named: "\(kategorieList[indexPath.row]).png")
         cell.itemIconView.image = img
-        cell.itemNameLabel.text = itemNameList[indexPath.row]
-        
+        cell.itemNameLabel.text = kategorieList[indexPath.row]
         return cell
     }
     
