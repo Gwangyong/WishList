@@ -29,7 +29,7 @@ class ItemListViewController: UIViewController {
         DropDown.appearance().backgroundColor = UIColor.white
         DropDown.appearance().selectionBackgroundColor = UIColor.lightGray
         DropDown.appearance().setupCornerRadius(10)
-        dropDown.dismissMode = .automatic
+        dropDown.dismissMode = .onTap
         tfInput.text = "목록"
         ivIcon.tintColor = UIColor.gray
     }
