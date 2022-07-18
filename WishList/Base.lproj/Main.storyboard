@@ -144,6 +144,21 @@
             </objects>
             <point key="canvasLocation" x="592.75362318840587" y="133.92857142857142"/>
         </scene>
+        <!--Record Screen View Controller-->
+        <scene sceneID="bZY-9N-tTo">
+            <objects>
+                <viewController storyboardIdentifier="RecordScreen" id="rVk-Vc-x4V" customClass="RecordScreenViewController" customModule="WishList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kq2-MU-I3U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OKZ-uk-2g3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OeN-lY-xLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="846"/>
+        </scene>
         <!--설정-->
         <scene sceneID="hFR-kn-Pug">
             <objects>

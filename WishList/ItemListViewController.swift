@@ -47,8 +47,14 @@ class ItemListViewController: UIViewController {
         dropDown.textFont = UIFont(name: "SDMiSaeng", size: CGFloat(20))!
             
         // selectionAction을 통해 아이템의 index와 item(이름)을 가져올 수 있다.
-        dropDown.selectionAction = { [weak self] (index, item) in
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
             self?.tfInput.text = item
+            // 드롭박스를 통한 화면 전환
+            if self?.tfInput.text == "기록" {
+                guard let viewController = self?.storyboard?.instantiateViewController(withIdentifier: "RecordScreen") else { return }
+                viewController.modalPresentationStyle = .fullScreen
+                self?.navigationController?.present(viewController, animated: false)
+            }
             //위의 대로, selectionAction이 발생하면 변경될 이미지.
             self?.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
             // 다시 메뉴를 열 때, 이전에 선택한 값이 선택되지 않은 상태로 열림.

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C2F9D6569F047BA0A0D7873 /* Pods_WishList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4B6AC8E50FCF870F263987 /* Pods_WishList.framework */; };
+		79331B27288557A400A7F607 /* RecordScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79331B26288557A400A7F607 /* RecordScreenViewController.swift */; };
 		79354DB5282403E200C52166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79354DB4282403E200C52166 /* AppDelegate.swift */; };
 		79354DB7282403E200C52166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79354DB6282403E200C52166 /* SceneDelegate.swift */; };
 		79354DB9282403E200C52166 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79354DB8282403E200C52166 /* ItemListViewController.swift */; };
@@ -22,10 +23,11 @@
 /* Begin PBXFileReference section */
 		0AF37BC01E9D6F47C36845B4 /* Pods-WishList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishList.release.xcconfig"; path = "Target Support Files/Pods-WishList/Pods-WishList.release.xcconfig"; sourceTree = "<group>"; };
 		4B4B6AC8E50FCF870F263987 /* Pods_WishList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WishList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79331B26288557A400A7F607 /* RecordScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordScreenViewController.swift; sourceTree = "<group>"; };
 		79354DB1282403E200C52166 /* WishList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79354DB4282403E200C52166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79354DB6282403E200C52166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79354DB8282403E200C52166 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		79354DB8282403E200C52166 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		79354DBB282403E200C52166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79354DBE282403E200C52166 /* WishList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WishList.xcdatamodel; sourceTree = "<group>"; };
 		79354DC0282403E400C52166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				79354DB8282403E200C52166 /* ItemListViewController.swift */,
 				79AD087C2826D17D00ACEA34 /* SettingsScreenViewController.swift */,
 				79354DBA282403E200C52166 /* Main.storyboard */,
+				79331B26288557A400A7F607 /* RecordScreenViewController.swift */,
 				79354DC0282403E400C52166 /* Assets.xcassets */,
 				79354DC2282403E400C52166 /* LaunchScreen.storyboard */,
 				79354DC5282403E400C52166 /* Info.plist */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79331B27288557A400A7F607 /* RecordScreenViewController.swift in Sources */,
 				79354DBF282403E200C52166 /* WishList.xcdatamodeld in Sources */,
 				79AD087D2826D17D00ACEA34 /* SettingsScreenViewController.swift in Sources */,
 				79354DB9282403E200C52166 /* ItemListViewController.swift in Sources */,
