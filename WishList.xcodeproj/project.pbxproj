@@ -11,7 +11,7 @@
 		79331B27288557A400A7F607 /* RecordScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79331B26288557A400A7F607 /* RecordScreenViewController.swift */; };
 		79354DB5282403E200C52166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79354DB4282403E200C52166 /* AppDelegate.swift */; };
 		79354DB7282403E200C52166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79354DB6282403E200C52166 /* SceneDelegate.swift */; };
-		79354DB9282403E200C52166 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79354DB8282403E200C52166 /* ItemListViewController.swift */; };
+		79354DB9282403E200C52166 /* WishListCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79354DB8282403E200C52166 /* WishListCategoryViewController.swift */; };
 		79354DBC282403E200C52166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79354DBA282403E200C52166 /* Main.storyboard */; };
 		79354DBF282403E200C52166 /* WishList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79354DBD282403E200C52166 /* WishList.xcdatamodeld */; };
 		79354DC1282403E400C52166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79354DC0282403E400C52166 /* Assets.xcassets */; };
@@ -27,7 +27,7 @@
 		79354DB1282403E200C52166 /* WishList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79354DB4282403E200C52166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79354DB6282403E200C52166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79354DB8282403E200C52166 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		79354DB8282403E200C52166 /* WishListCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListCategoryViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		79354DBB282403E200C52166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79354DBE282403E200C52166 /* WishList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WishList.xcdatamodel; sourceTree = "<group>"; };
 		79354DC0282403E400C52166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				79A33A8528266C910074A8A1 /* SDMiSaeng.ttf */,
 				79354DB4282403E200C52166 /* AppDelegate.swift */,
 				79354DB6282403E200C52166 /* SceneDelegate.swift */,
-				79354DB8282403E200C52166 /* ItemListViewController.swift */,
+				79354DB8282403E200C52166 /* WishListCategoryViewController.swift */,
 				79AD087C2826D17D00ACEA34 /* SettingsScreenViewController.swift */,
 				79354DBA282403E200C52166 /* Main.storyboard */,
 				79331B26288557A400A7F607 /* RecordScreenViewController.swift */,
@@ -222,7 +222,7 @@
 				79331B27288557A400A7F607 /* RecordScreenViewController.swift in Sources */,
 				79354DBF282403E200C52166 /* WishList.xcdatamodeld in Sources */,
 				79AD087D2826D17D00ACEA34 /* SettingsScreenViewController.swift in Sources */,
-				79354DB9282403E200C52166 /* ItemListViewController.swift in Sources */,
+				79354DB9282403E200C52166 /* WishListCategoryViewController.swift in Sources */,
 				79354DB5282403E200C52166 /* AppDelegate.swift in Sources */,
 				79354DB7282403E200C52166 /* SceneDelegate.swift in Sources */,
 			);

@@ -1,7 +1,7 @@
 import UIKit
 import DropDown
 
-class ItemListViewController: UIViewController {
+class WishListCategoryViewContoller: UIViewController {
 
     // tfInput(TextFieldInput) / ivIcon(ImageViewIcon)
     @IBOutlet weak var dropView: UIView!
@@ -17,7 +17,7 @@ class ItemListViewController: UIViewController {
         self.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
     }
     
-    let kategorieList = ["전체", "여행", "가족", "친구", "연인", "배움", "도전", "ETC"]
+    let wishListCategory = ["전체", "여행", "가족", "친구", "연인", "배움", "도전", "ETC"]
     let dropDown = DropDown()
     let viewListLabel = ["목록", "기록"]
     
@@ -80,19 +80,19 @@ class ItemListViewController: UIViewController {
 }
 
 // UITableView
-extension ItemListViewController: UITableViewDataSource, UITableViewDelegate {
+extension WishListCategoryViewContoller: UITableViewDataSource, UITableViewDelegate {
     
     // UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return kategorieList.count
+        return wishListCategory.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else { return UITableViewCell() }
         // 위에 정의해준 itemNameList 배열의 indexPath.row 값으로 하여, 동일한 이름의 이미지와 이름을 가져다가 배치함
-        let img = UIImage(named: "\(kategorieList[indexPath.row]).png")
+        let img = UIImage(named: "\(wishListCategory[indexPath.row]).png")
         cell.itemIconView.image = img
-        cell.itemNameLabel.text = kategorieList[indexPath.row]
+        cell.itemNameLabel.text = wishListCategory[indexPath.row]
         return cell
     }
     
