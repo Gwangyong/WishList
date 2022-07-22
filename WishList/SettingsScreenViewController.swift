@@ -4,9 +4,9 @@ class SettingsScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.leftBarButtonItem?.tintColor = .black
+        self.navigationController?.isNavigationBarHidden = true
     }
-
+    
     @IBAction func tapBackButton(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
     }

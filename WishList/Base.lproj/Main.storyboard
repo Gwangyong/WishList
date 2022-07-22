@@ -128,8 +128,9 @@
                             </view>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="X8a-DI-bNa">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="bhn-il-cTZ" kind="show" id="Usp-Eo-xp0"/>
+                                <action selector="tapSettingsButton:" destination="BYZ-38-t0r" id="QUn-rr-1O7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -144,43 +145,37 @@
             </objects>
             <point key="canvasLocation" x="592.75362318840587" y="133.92857142857142"/>
         </scene>
-        <!--Record Screen View Controller-->
-        <scene sceneID="bZY-9N-tTo">
+        <!--Settings Screen View Controller-->
+        <scene sceneID="OXZ-Pb-c5h">
             <objects>
-                <viewController storyboardIdentifier="RecordScreen" id="rVk-Vc-x4V" customClass="RecordScreenViewController" customModule="WishList" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kq2-MU-I3U">
+                <viewController storyboardIdentifier="SettingsScreenViewController" id="GS2-ta-6Cs" customClass="SettingsScreenViewController" customModule="WishList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7gD-x1-35l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="OKZ-uk-2g3"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4l2-hc-apA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="설정" id="BVf-RC-EYH">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.backward" catalog="system" id="PPG-yb-9FJ">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="tapBackButton:" destination="GS2-ta-6Cs" id="vfT-av-wxI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TIz-H7-wlM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OeN-lY-xLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzY-ui-kiT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="846"/>
-        </scene>
-        <!--설정-->
-        <scene sceneID="hFR-kn-Pug">
-            <objects>
-                <viewController id="bhn-il-cTZ" customClass="SettingsScreenViewController" customModule="WishList" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eG6-zZ-4yc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="dae-Fg-jZ8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="설정" id="aVl-Jj-InY">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" style="plain" id="IDa-ae-1ah">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="tapBackButton:" destination="bhn-il-cTZ" id="6Sg-0g-7SK"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tfp-dr-NSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1442" y="134"/>
+            <point key="canvasLocation" x="1413" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TyC-LJ-VnV">
@@ -198,9 +193,41 @@
             </objects>
             <point key="canvasLocation" x="-257" y="134"/>
         </scene>
+        <!--Record List View Controller-->
+        <scene sceneID="1Xr-Kl-row">
+            <objects>
+                <viewController storyboardIdentifier="RecordListViewController" id="bDo-rR-Mbu" customClass="RecordListViewController" customModule="WishList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jR4-Sy-MMY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHh-bt-INA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="iuV-Xl-qvX">
+                                        <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" style="plain" id="Kqz-oa-fsO">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="tapSettingsButton:" destination="bDo-rR-Mbu" id="0LR-y4-tTQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9kM-IJ-OT5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wz-pX-QmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="844"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="free-icon-font-angle-small-up-3916911" width="512" height="512"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

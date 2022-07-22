@@ -17,6 +17,15 @@ class WishListCategoryViewContoller: UIViewController {
         self.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    @IBAction func tapSettingsButton(_ sender: UIBarButtonItem) {
+        guard let SettingsViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsScreenViewController") else { return }
+        self.navigationController?.pushViewController(SettingsViewController, animated: true)
+    }
+    
     let wishListCategory = ["전체", "여행", "가족", "친구", "연인", "배움", "도전", "ETC"]
     let dropDown = DropDown()
     let viewListLabel = ["목록", "기록"]
@@ -51,10 +60,10 @@ class WishListCategoryViewContoller: UIViewController {
             self?.tfInput.text = item
             // 드롭박스를 통한 화면 전환
             if self?.tfInput.text == "기록" {
-                guard let viewController = self?.storyboard?.instantiateViewController(withIdentifier: "RecordScreen") else { return }
-                viewController.modalPresentationStyle = .fullScreen
-                self?.navigationController?.present(viewController, animated: false)
+                guard let RecordListViewController = self?.storyboard?.instantiateViewController(withIdentifier: "RecordListViewController") else { return }
+                self?.navigationController?.pushViewController(RecordListViewController, animated: true)
             }
+            
             //위의 대로, selectionAction이 발생하면 변경될 이미지.
             self?.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
             // 다시 메뉴를 열 때, 이전에 선택한 값이 선택되지 않은 상태로 열림.
