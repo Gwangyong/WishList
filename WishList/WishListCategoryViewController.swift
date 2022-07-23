@@ -15,6 +15,7 @@ class WishListCategoryViewContoller: UIViewController {
         setDropDown()
         self.navigationItem.rightBarButtonItem?.tintColor = .black
         self.ivIcon.image = UIImage.init(named: "free-icon-font-angle-small-up-3916911")
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
