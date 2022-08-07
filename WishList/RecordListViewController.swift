@@ -51,7 +51,7 @@ class RecordListViewController: UIViewController {
             // 드롭박스를 통한 화면 전환
             if self?.tfInput.text == "목록" {
                 guard let WishListCategoryViewContoller = self?.storyboard?.instantiateViewController(withIdentifier: "WishListCategoryViewContoller") else { return }
-                self?.navigationController?.pushViewController(WishListCategoryViewContoller, animated: true)
+                self?.navigationController?.pushViewController(WishListCategoryViewContoller, animated: false)
             }
             
             //위의 대로, selectionAction이 발생하면 변경될 이미지.
