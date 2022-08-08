@@ -18,6 +18,8 @@
 		79A33A8628266C910074A8A1 /* SDMiSaeng.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A33A8528266C910074A8A1 /* SDMiSaeng.ttf */; };
 		79AD087D2826D17D00ACEA34 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD087C2826D17D00ACEA34 /* SettingsScreenViewController.swift */; };
 		79C5EA5A28883DA800F7904C /* RecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C5EA5928883DA800F7904C /* RecordListViewController.swift */; };
+		79D1032028A0CE0E00784C6A /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1031F28A0CE0E00784C6A /* WishListViewController.swift */; };
+		79D1032228A0E91700784C6A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1032128A0E91700784C6A /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		79A33A8528266C910074A8A1 /* SDMiSaeng.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDMiSaeng.ttf; sourceTree = "<group>"; };
 		79AD087C2826D17D00ACEA34 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 		79C5EA5928883DA800F7904C /* RecordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListViewController.swift; sourceTree = "<group>"; };
+		79D1031F28A0CE0E00784C6A /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		79D1032128A0E91700784C6A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B45860FC85052B5D9E7EC89F /* Pods-WishList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishList.debug.xcconfig"; path = "Target Support Files/Pods-WishList/Pods-WishList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,11 +81,13 @@
 				79354DB8282403E200C52166 /* WishListCategoryViewController.swift */,
 				79AD087C2826D17D00ACEA34 /* SettingsScreenViewController.swift */,
 				79354DBA282403E200C52166 /* Main.storyboard */,
+				79D1031F28A0CE0E00784C6A /* WishListViewController.swift */,
 				79354DC0282403E400C52166 /* Assets.xcassets */,
 				79354DC2282403E400C52166 /* LaunchScreen.storyboard */,
 				79354DC5282403E400C52166 /* Info.plist */,
 				79354DBD282403E200C52166 /* WishList.xcdatamodeld */,
 				79C5EA5928883DA800F7904C /* RecordListViewController.swift */,
+				79D1032128A0E91700784C6A /* Task.swift */,
 			);
 			path = WishList;
 			sourceTree = "<group>";
@@ -219,7 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D1032228A0E91700784C6A /* Task.swift in Sources */,
 				79354DBF282403E200C52166 /* WishList.xcdatamodeld in Sources */,
+				79D1032028A0CE0E00784C6A /* WishListViewController.swift in Sources */,
 				79AD087D2826D17D00ACEA34 /* SettingsScreenViewController.swift in Sources */,
 				79354DB9282403E200C52166 /* WishListCategoryViewController.swift in Sources */,
 				79354DB5282403E200C52166 /* AppDelegate.swift in Sources */,

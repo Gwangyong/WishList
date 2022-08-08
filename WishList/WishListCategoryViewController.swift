@@ -108,7 +108,12 @@ extension WishListCategoryViewContoller: UITableViewDataSource, UITableViewDeleg
     
     // UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("--> \(indexPath.row)")
+//        print("--> \(indexPath.row)")
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "WishListViewController") else { return }
+//        let task = self.wishListCategory[indexPath.row]
+//        viewController.task = task
+//        viewController.indexPath = indexPath
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
