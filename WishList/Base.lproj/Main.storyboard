@@ -313,36 +313,35 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rIW-Go-gHl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rIW-Go-gHl">
                                 <rect key="frame" x="0.0" y="105" width="414" height="507"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YlS-oL-b3r" style="IBUITableViewCellStyleDefault" id="VUX-IO-KKX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="VUX-IO-KKX">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VUX-IO-KKX" id="r2Y-we-zqI">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YlS-oL-b3r">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPx-HL-Bha">
-                                <rect key="frame" x="150" y="701" width="114" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPx-HL-Bha">
+                                <rect key="frame" x="167" y="732" width="80" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Wb0-Uu-DWh"/>
+                                    <constraint firstAttribute="width" constant="80" id="8yw-Nf-XSH"/>
+                                    <constraint firstAttribute="height" constant="60" id="iJg-po-ZCP"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large"/>
+                                </state>
                                 <connections>
                                     <action selector="tapAddButton:" destination="Eff-9Y-P07" eventType="touchUpInside" id="YnP-w3-stP"/>
                                 </connections>
@@ -352,14 +351,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rIW-Go-gHl" firstAttribute="top" secondItem="RE5-c8-FBp" secondAttribute="bottom" id="0GA-ve-IW0"/>
-                            <constraint firstItem="RBU-Su-4td" firstAttribute="trailing" secondItem="OPx-HL-Bha" secondAttribute="trailing" constant="150" id="3zW-2S-ayQ"/>
+                            <constraint firstItem="OPx-HL-Bha" firstAttribute="centerX" secondItem="rIW-Go-gHl" secondAttribute="centerX" id="EzN-dT-BtD"/>
                             <constraint firstItem="RBU-Su-4td" firstAttribute="trailing" secondItem="rIW-Go-gHl" secondAttribute="trailing" id="MlB-sU-yhK"/>
                             <constraint firstItem="RE5-c8-FBp" firstAttribute="top" secondItem="RBU-Su-4td" secondAttribute="top" constant="17" id="PCy-M9-UgV"/>
                             <constraint firstItem="RE5-c8-FBp" firstAttribute="trailing" secondItem="rIW-Go-gHl" secondAttribute="trailing" id="WLO-7W-Weh"/>
                             <constraint firstItem="RE5-c8-FBp" firstAttribute="leading" secondItem="rIW-Go-gHl" secondAttribute="leading" id="X4u-VV-e7Y"/>
-                            <constraint firstItem="OPx-HL-Bha" firstAttribute="top" secondItem="rIW-Go-gHl" secondAttribute="bottom" constant="89" id="Yzf-3G-JcL"/>
+                            <constraint firstItem="OPx-HL-Bha" firstAttribute="top" secondItem="rIW-Go-gHl" secondAttribute="bottom" constant="120" id="Yzf-3G-JcL"/>
                             <constraint firstItem="RBU-Su-4td" firstAttribute="bottom" secondItem="rIW-Go-gHl" secondAttribute="bottom" constant="250" id="a1M-YI-qds"/>
-                            <constraint firstItem="OPx-HL-Bha" firstAttribute="leading" secondItem="RBU-Su-4td" secondAttribute="leading" constant="150" id="jCf-5o-yWc"/>
                             <constraint firstItem="rIW-Go-gHl" firstAttribute="leading" secondItem="RBU-Su-4td" secondAttribute="leading" id="ytI-wz-Je9"/>
                         </constraints>
                     </view>
@@ -377,6 +375,9 @@
         <image name="free-icon-font-angle-small-up-3916911" width="512" height="512"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
