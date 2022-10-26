@@ -52,6 +52,7 @@ class WishListViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         // set을 통해 value로 data를, key 값으로 wishLists를 저장
         userDefaults.set(data, forKey: "wishLists")
+        // 여기에서 wishLists로 저장했는데, 이를 각 현재 목록 인덱스 값을 매개변수로 받아와서 그 매개변수를 넣어주는건..? 안된다면 codable을 사용하던지..
     }
     
     // MARK: - 데이터 로드
@@ -68,6 +69,7 @@ class WishListViewController: UIViewController {
     }
 }
 
+// DataSource: 데이터를 받아 뷰에 그려주는 역할 -> 무엇을 어떻게 보여줄 것인가?
 extension WishListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.wishLists.count
@@ -86,6 +88,7 @@ extension WishListViewController: UITableViewDataSource {
     }
 }
 
+// Delegate: 동작을 제시 -> 사용자가 보이는 것들중 무언가에 대한 액션을 취한다면 그에 대한 동작을 수행
 extension WishListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var wishList = self.wishLists[indexPath.row]
